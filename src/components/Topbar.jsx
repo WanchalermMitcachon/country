@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { IoMoonOutline, IoMoonSharp } from "react-icons/io5";
+import { AppContext } from "../App";
 
-function Topbar({ darkMode, setDarkMode }) {
+function Topbar() {
+  const { darkMode, setDarkMode } = useContext(AppContext);
   return (
     <div
-      className={`h-[80px]  flex justify-between items-center px-[13px] ${
-        darkMode ? "bg-[#2B3844] text-white" : "text-black border-b-2"
-      }`}
+      className={`h-[80px]  flex justify-between items-center px-[13px] lg:px-14 ${
+        darkMode ? "bg-[#2B3844] text-white" : "text-black border-b-2 bg-white "
+      }` }
     >
       <h1 className="font-extrabold text-[14px] leading-5">
         Where is the world?
