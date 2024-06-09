@@ -94,7 +94,7 @@ function Content() {
               key={idx}
               className={`${
                 darkMode ? "bg-[#2B3844]" : "bg-[#FFFF]"
-              } my-12  pb-12 rounded-lg `}
+              } my-12  pb-12 rounded-lg cursor-pointer`}
               onClick={() => handleOnclick(item)}
             >
               <img
